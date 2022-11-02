@@ -55,5 +55,24 @@ IF Age GREATER THAN OR EQUAL TO 18 THEN
        DISPLAY "Go to college"
 END-IF
 
+IF Score IS PassingScore THEN
+       DISPLAY "You passed"
+ELSE   
+       DISPLAY "You failed"
+END-IF
+
+IF Score IS NOT NUMERIC THEN
+       DISPLAY "Not a number"
+END-IF
+
+IF Age > 18 THEN
+       SET CanVote TO TRUE
+ELSE
+       SET CantVote TO TRUE
+END-IF
+
+DISPLAY "Vote " CanVoteFlag
+   
+
 
 STOP RUN.
