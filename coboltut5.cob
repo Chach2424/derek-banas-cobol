@@ -16,6 +16,8 @@ WORKING-STORAGE SECTION.
        01 Sum1   PIC 99.
 
 PROCEDURE DIVISION.
+CALL 'GETSUM' USING Num1, Num2, Sum1.
+DISPLAY Num1 " + " Num2 " = " Sum1.
 
 
 
