@@ -73,6 +73,18 @@ END-IF
 
 DISPLAY "Vote " CanVoteFlag
    
+DISPLAY "Enter a single number or press X to exit: "
+ACCEPT TestNumber
+PERFORM UNTIL NOT ANumber
+       EVALUATE TRUE
+           WHEN IsPrime DISPLAY "Prime"
+           WHEN IsOdd DISPLAY "Odd"
+           WHEN IsEven DISPLAY "Even"
+           WHEN LessThan5 DISPLAY "Less than 5"
+           WHEN OTHER DISPLAY "Default message"
+       END-EVALUATE
+       ACCEPT TestNumber
+END-PERFORM
 
 
 STOP RUN.
