@@ -9,10 +9,16 @@ DATA DIVISION.
 FILE SECTION.
 
 WORKING-STORAGE SECTION.
-
+*> COBOL uses fixed point decimal arithmetic instead of floating point
+01 Price PIC 9(4)V99.
+01 TaxRate PIC V999 VALUE .075. 
+01 FullPrice PIC 9(4)V99.
 
 PROCEDURE DIVISION.
-
+DISPLAY "Enter a price: " WITH NO ADVANCING
+ACCEPT Price
+COMPUTE FullPrice ROUNDED = Price + (Price * TaxRate)
+DISPLAY "Price + Tax = " FullPrice.
 
 STOP RUN.
 
