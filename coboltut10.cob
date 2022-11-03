@@ -28,10 +28,13 @@ WORKING-STORAGE SECTION.
            03 WSLastName PIC X(15). 
 
 PROCEDURE DIVISION.
-OPEN OUTPUT CustomerFile.
-       MOVE 00001 TO IDNum.
-       MOVE 'Doug' TO FirstName.
-       MOVE 'Thomas' TO LastName.
+OPEN EXTEND CustomerFile.
+       DISPLAY "Customer ID " WITH NO ADVANCING
+       ACCEPT IDNum
+       DISPLAY "Customer First Name " WITH NO ADVANCING
+       ACCEPT FirstName
+       DISPLAY "Customer Last Name " WITH NO ADVANCING
+       ACCEPT LastName
        WRITE CustomerData
        END-WRITE.
 CLOSE CustomerFile.
