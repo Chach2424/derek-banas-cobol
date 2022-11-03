@@ -1,0 +1,24 @@
+       >>SOURCE FORMAT FREE
+IDENTIFICATION DIVISION.
+PROGRAM-ID. coboltut12.
+
+DATA DIVISION.
+
+WORKING-STORAGE SECTION.
+
+PROCEDURE DIVISION.
+
+STOP RUN.          
+
+
+
+       
+      
+
+     
+       
+
+
+
+
+
